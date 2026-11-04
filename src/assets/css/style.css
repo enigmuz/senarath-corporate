@@ -222,3 +222,79 @@ h2.section-title{font-size:2.15rem;margin-bottom:14px}
   .site-footer .fgrid{grid-template-columns:1fr}
   .section{padding:56px 0}
 }
+
+/* ============================================================
+   Mobile responsiveness enhancements + hero slider
+   (look & feel only)
+   ============================================================ */
+
+/* ---------- Hamburger + mobile menu ---------- */
+.hamburger{display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  width:46px;height:46px;border:1px solid var(--line);border-radius:11px;background:#fff;cursor:pointer;padding:0}
+.hamburger span{display:block;width:22px;height:2px;background:var(--navy-800);border-radius:2px;transition:.22s ease}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;flex-direction:column;background:#fff;border-top:1px solid var(--line);
+  padding:8px 24px 20px;box-shadow:var(--shadow)}
+.mobile-menu.open{display:flex;animation:mm .22s ease}
+@keyframes mm{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.mobile-menu a{padding:14px 4px;border-bottom:1px solid var(--mist-2);font-weight:600;color:var(--navy-800);font-size:1rem}
+.mobile-menu a.active{color:var(--gold-500)}
+.mm-cta{display:flex;gap:10px;margin-top:16px}
+.mm-cta .btn{flex:1;justify-content:center}
+
+/* ---------- Hero slider ---------- */
+.hero-slider{position:relative;max-width:1200px;margin:22px auto 0;padding:0 24px}
+.slides{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;
+  box-shadow:var(--shadow-lg);background:var(--navy-800)}
+.slide{position:absolute;inset:0;display:block;opacity:0;visibility:hidden;
+  transition:opacity .9s ease, visibility .9s ease;transform:scale(1.02)}
+.slide.is-active{opacity:1;visibility:visible;transform:scale(1);animation:kenburns 7s ease forwards}
+@keyframes kenburns{from{transform:scale(1.03)}to{transform:scale(1)}}
+.slide img{width:100%;height:100%;object-fit:cover;object-position:center}
+.sl-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+  width:46px;height:46px;border-radius:50%;border:none;cursor:pointer;display:grid;place-items:center;
+  background:rgba(7,19,36,.45);color:#fff;backdrop-filter:blur(4px);transition:.18s}
+.sl-arrow:hover{background:rgba(201,162,75,.92);color:var(--navy-900)}
+.sl-prev{left:40px}.sl-next{right:40px}
+.sl-dots{position:absolute;left:0;right:0;bottom:16px;display:flex;gap:9px;justify-content:center;z-index:3}
+.sl-dots button{width:10px;height:10px;border-radius:50%;border:none;cursor:pointer;padding:0;
+  background:rgba(255,255,255,.55);transition:.2s}
+.sl-dots button.active{background:var(--gold-400);width:26px;border-radius:6px}
+
+/* ---------- Hero CTA + trust bar ---------- */
+.hero-bar{border-bottom:1px solid var(--line);background:#fff;margin-top:22px}
+.hero-bar .container{display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap;padding:22px 24px}
+.hb-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hb-trust{display:flex;gap:34px}
+.hb-trust .t b{font-family:var(--serif);font-size:1.5rem;color:var(--navy-800);display:block;line-height:1}
+.hb-trust .t span{font-size:.78rem;color:var(--muted)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .nav-cta{display:none}
+  .hamburger{display:flex}
+  .nav{height:68px}
+  .hero-slider{padding:0 16px;margin-top:16px}
+  .sl-prev{left:24px}.sl-next{right:24px}
+}
+@media (max-width:620px){
+  .hero-slider{padding:0 12px}
+  .slides{aspect-ratio:4/3;border-radius:14px}
+  .slide img{object-position:22% center}   /* keep the left-side message in frame */
+  .sl-arrow{width:38px;height:38px}
+  .sl-prev{left:16px}.sl-next{right:16px}
+  .hb-actions{width:100%}
+  .hb-actions .btn{flex:1;justify-content:center}
+  .hb-trust{width:100%;justify-content:space-between;gap:12px}
+  .hb-trust .t b{font-size:1.25rem}
+  .container{padding:0 16px}
+  .hero h1,.page-hero h1{font-size:1.95rem}
+  .cta{padding:34px 22px}
+  .cta h2{font-size:1.6rem}
+}
+@media (max-width:400px){
+  .slides{aspect-ratio:3/4}
+  .hb-trust .t span{font-size:.72rem}
+}

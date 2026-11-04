@@ -5,41 +5,42 @@ require __DIR__.'/includes/header.php';
 $onlineUrl = getenv('ONLINE_BANKING_URL') ?: 'https://online.senarathbank.com';
 ?>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-copy">
-      <p class="eyebrow">Personal · Business · Private</p>
-      <h1>Banking built on <span class="accent">trust</span>, delivered with precision.</h1>
-      <p class="lead">Open an account in minutes, move money with confidence, and grow your wealth with a bank that has served Sri Lankan families and businesses for over three decades.</p>
-      <div class="hero-actions">
-        <a class="btn btn-gold btn-lg" href="/personal.php#open">Open an account</a>
-        <a class="btn btn-outline-light btn-lg" href="<?= htmlspecialchars($onlineUrl) ?>/index.php">Log in to Online Banking</a>
-      </div>
-      <div class="trust">
-        <div class="t"><b>1.2M+</b><span>Customers served</span></div>
-        <div class="t"><b>214</b><span>Branches &amp; service points</span></div>
-        <div class="t"><b>A+(lka)</b><span>National rating</span></div>
-      </div>
-    </div>
+<!-- HERO SLIDER -->
+<section class="hero-slider" aria-label="Senarath Bank highlights" aria-roledescription="carousel">
+  <div class="slides" id="slides">
+    <a class="slide is-active" href="/personal.php#open" aria-label="Ayubowan — Welcome to Senarath Bank">
+      <img src="/assets/img/slide1.jpg" alt="Ayubowan — Welcome to Senarath Bank, your trusted financial partner" fetchpriority="high">
+    </a>
+    <a class="slide" href="/personal.php#loans" aria-label="Banking for a better lifestyle">
+      <img src="/assets/img/slide2.jpg" alt="Banking for a better lifestyle — save, grow, own, invest" loading="lazy">
+    </a>
+    <a class="slide" href="/about.php" aria-label="Banking for a more caring Sri Lanka">
+      <img src="/assets/img/slide3.jpg" alt="Banking for a more caring Sri Lanka — community support programme" loading="lazy">
+    </a>
+  </div>
+  <button class="sl-arrow sl-prev" id="slPrev" aria-label="Previous slide" type="button">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="sl-arrow sl-next" id="slNext" aria-label="Next slide" type="button">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <div class="sl-dots" id="slDots" role="tablist" aria-label="Choose slide"></div>
+</section>
 
-    <!-- stylised account card -->
-    <div class="hero-card" aria-hidden="true">
-      <div class="hc-top">
-        <span class="hc-chip">Senarath Smart Current</span>
-        <span class="hc-balance">Available balance</span>
-      </div>
-      <div class="hc-amt">LKR 842,160.75</div>
-      <div class="hc-acct">•••• •••• 4477 · Primary</div>
-      <div class="hc-rows">
-        <div class="hc-row"><span class="l">Salary — Ceylon Tech (Oct)</span><span class="r pos">+ 285,000.00</span></div>
-        <div class="hc-row"><span class="l">Keells Super — card</span><span class="r neg">− 12,480.00</span></div>
-        <div class="hc-row"><span class="l">Transfer to M. Perera</span><span class="r neg">− 40,000.00</span></div>
-        <div class="hc-row"><span class="l">FD interest credit</span><span class="r pos">+ 6,912.33</span></div>
-      </div>
+<!-- CTA + trust bar under the slider -->
+<div class="hero-bar">
+  <div class="container">
+    <div class="hb-actions">
+      <a class="btn btn-gold btn-lg" href="/personal.php#open">Open an account</a>
+      <a class="btn btn-ghost btn-lg" href="<?= htmlspecialchars($onlineUrl) ?>/index.php">Log in to Online Banking</a>
+    </div>
+    <div class="hb-trust">
+      <div class="t"><b>1.2M+</b><span>Customers served</span></div>
+      <div class="t"><b>214</b><span>Branches &amp; ATMs</span></div>
+      <div class="t"><b>A+(lka)</b><span>National rating</span></div>
     </div>
   </div>
-</section>
+</div>
 
 <!-- TRUST STRIP -->
 <div class="logos">

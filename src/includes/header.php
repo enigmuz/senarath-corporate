@@ -19,8 +19,6 @@ function navcls($p,$cur){ return $p===$cur ? 'active' : ''; }
 <link rel="icon" href="/assets/img/logo.png">
 </head>
 <body>
-<div class="lab-banner">LAB ENVIRONMENT — <b>Senarath Bank</b> is a fictional institution. All content and data are synthetic and for the CrowdStrike security demonstration only.</div>
-
 <div class="topbar">
   <div class="container">
     <div class="tb-left">Sri Lanka&rsquo;s trusted name in banking since 1988</div>
@@ -45,6 +43,22 @@ function navcls($p,$cur){ return $p===$cur ? 'active' : ''; }
       <a class="<?= navcls('contact',$page) ?>" href="/contact.php">Contact</a>
     </nav>
     <div class="nav-cta">
+      <a class="btn btn-ghost" href="<?= htmlspecialchars($onlineUrl) ?>/index.php">Log in</a>
+      <a class="btn btn-gold" href="/personal.php#open">Open an account</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="<?= navcls('home',$page) ?>" href="/index.php">Home</a>
+    <a class="<?= navcls('personal',$page) ?>" href="/personal.php">Personal</a>
+    <a class="<?= navcls('business',$page) ?>" href="/business.php">Business</a>
+    <a class="<?= navcls('about',$page) ?>" href="/about.php">About</a>
+    <a class="<?= navcls('contact',$page) ?>" href="/contact.php">Contact</a>
+    <a href="/branches.php">Branches &amp; ATMs</a>
+    <a href="/contact.php">Support</a>
+    <div class="mm-cta">
       <a class="btn btn-ghost" href="<?= htmlspecialchars($onlineUrl) ?>/index.php">Log in</a>
       <a class="btn btn-gold" href="/personal.php#open">Open an account</a>
     </div>
