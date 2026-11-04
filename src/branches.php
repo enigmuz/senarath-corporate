@@ -1,16 +1,16 @@
 <?php
 $page='';
-$title='Branches & ATMs — Senarath Bank';
+$title='Branches & ATMs - Senarath Bank';
 require __DIR__.'/includes/header.php';
 $branches = [
-  ['Colombo — Head Office','No. 1988, Union Place, Colombo 02','Mon–Fri 9:00–16:00'],
-  ['Kandy','112 Peradeniya Road, Kandy','Mon–Fri 9:00–16:00'],
-  ['Galle','45 Wackwella Road, Galle','Mon–Fri 9:00–16:00'],
-  ['Jaffna','8 Hospital Road, Jaffna','Mon–Fri 9:00–15:30'],
-  ['Matara','201 Anagarika Dharmapala Mw, Matara','Mon–Fri 9:00–16:00'],
-  ['Dickwella','77 Beach Road, Dickwella','Mon–Fri 9:00–15:30'],
-  ['Negombo','330 Main Street, Negombo','Mon–Fri 9:00–16:00'],
-  ['Kurunegala','14 Colombo Road, Kurunegala','Mon–Fri 9:00–16:00'],
+  ['Colombo - Head Office','No. 1988, Union Place, Colombo 02','Mon-Fri 9:00-16:00'],
+  ['Kandy','112 Peradeniya Road, Kandy','Mon-Fri 9:00-16:00'],
+  ['Galle','45 Wackwella Road, Galle','Mon-Fri 9:00-16:00'],
+  ['Jaffna','8 Hospital Road, Jaffna','Mon-Fri 9:00-15:30'],
+  ['Matara','201 Anagarika Dharmapala Mw, Matara','Mon-Fri 9:00-16:00'],
+  ['Dickwella','77 Beach Road, Dickwella','Mon-Fri 9:00-15:30'],
+  ['Negombo','330 Main Street, Negombo','Mon-Fri 9:00-16:00'],
+  ['Kurunegala','14 Colombo Road, Kurunegala','Mon-Fri 9:00-16:00'],
 ];
 ?>
 <section class="page-hero">

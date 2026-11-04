@@ -1,5 +1,5 @@
 /* ============================================================
-   Senarath Bank — Corporate site
+   Senarath Bank - Corporate site
    Deep navy + gold private-bank palette
    LAB ENVIRONMENT · synthetic / fictional institution
    ============================================================ */
@@ -11,6 +11,7 @@
   --gold-500:#c9a24b;
   --gold-400:#d9b968;
   --gold-300:#e7cf93;
+  --brand-700:#143a86; --brand-600:#1a4fb0; --brand-500:#2160cf; --brand-400:#3f82ec; --brand-300:#8fb5f2; --brand-100:#dbe8fb; --brand-50:#eff5fe;
   --ink:#0d1826;
   --paper:#ffffff;
   --mist:#f4f6f9;
@@ -40,7 +41,7 @@ img{max-width:100%;display:block}
 .section{padding:84px 0}
 .eyebrow{
   font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--gold-500);font-weight:700;margin:0 0 14px
+  color:var(--brand-500);font-weight:700;margin:0 0 14px
 }
 h1,h2,h3{font-family:var(--serif);color:var(--ink);line-height:1.15;font-weight:700;margin:0}
 h2.section-title{font-size:2.15rem;margin-bottom:14px}
@@ -50,7 +51,7 @@ h2.section-title{font-size:2.15rem;margin-bottom:14px}
 .topbar{background:var(--navy-900);color:#c7d2e0;font-size:.82rem}
 .topbar .container{display:flex;justify-content:space-between;align-items:center;height:40px}
 .topbar a{color:#c7d2e0;opacity:.85}
-.topbar a:hover{opacity:1;color:var(--gold-300)}
+.topbar a:hover{opacity:1;color:var(--brand-300)}
 .topbar .tb-right{display:flex;gap:22px;align-items:center}
 
 /* ---------- Header ---------- */
@@ -63,12 +64,12 @@ h2.section-title{font-size:2.15rem;margin-bottom:14px}
 .brand img{height:46px;width:auto}
 .brand .bwrap{display:flex;flex-direction:column;line-height:1}
 .brand .bname{font-family:var(--serif);font-weight:700;color:var(--navy-800);font-size:1.18rem;letter-spacing:.2px}
-.brand .btag{font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-500);font-weight:700;margin-top:3px}
+.brand .btag{font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brand-500);font-weight:700;margin-top:3px}
 .menu{display:flex;gap:30px;align-items:center}
 .menu a{font-size:.94rem;font-weight:500;color:var(--navy-800);padding:6px 0;position:relative}
-.menu a:hover{color:var(--gold-500)}
-.menu a.active{color:var(--gold-500)}
-.menu a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--gold-500)}
+.menu a:hover{color:var(--brand-500)}
+.menu a.active{color:var(--brand-500)}
+.menu a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--brand-500)}
 .nav-cta{display:flex;gap:12px;align-items:center}
 
 /* ---------- Buttons ---------- */
@@ -77,8 +78,8 @@ h2.section-title{font-size:2.15rem;margin-bottom:14px}
   padding:12px 22px;border-radius:999px;border:1px solid transparent;cursor:pointer;
   transition:.18s ease;white-space:nowrap
 }
-.btn-gold{background:linear-gradient(135deg,var(--gold-400),var(--gold-500));color:var(--navy-900);box-shadow:0 6px 18px rgba(201,162,75,.35)}
-.btn-gold:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(201,162,75,.45)}
+.btn-gold{background:linear-gradient(135deg,var(--brand-400),var(--brand-500));color:#fff;box-shadow:0 6px 18px rgba(33,96,207,.35)}
+.btn-gold:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(33,96,207,.45)}
 .btn-ghost{background:transparent;border-color:var(--navy-600);color:var(--navy-800)}
 .btn-ghost:hover{background:var(--navy-800);color:#fff}
 .btn-light{background:#fff;color:var(--navy-800)}
@@ -90,7 +91,7 @@ h2.section-title{font-size:2.15rem;margin-bottom:14px}
 .hero{
   position:relative;color:#eaf0f8;overflow:hidden;
   background:
-    radial-gradient(1200px 500px at 80% -10%,rgba(201,162,75,.18),transparent 60%),
+    radial-gradient(1200px 500px at 80% -10%,rgba(33,96,207,.18),transparent 60%),
     linear-gradient(160deg,var(--navy-900) 0%,var(--navy-800) 55%,var(--navy-700) 100%);
 }
 .hero::after{
@@ -100,22 +101,22 @@ h2.section-title{font-size:2.15rem;margin-bottom:14px}
 }
 .hero .container{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-top:76px;padding-bottom:88px}
 .hero h1{color:#fff;font-size:3.1rem;letter-spacing:-.5px}
-.hero h1 .accent{color:var(--gold-400)}
+.hero h1 .accent{color:var(--brand-400)}
 .hero p.lead{color:#b9c6d8;margin-top:20px;font-size:1.12rem}
 .hero .hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
 .hero .trust{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap}
 .hero .trust .t{display:flex;flex-direction:column}
-.hero .trust .t b{font-family:var(--serif);font-size:1.7rem;color:var(--gold-300)}
+.hero .trust .t b{font-family:var(--serif);font-size:1.7rem;color:var(--brand-300)}
 .hero .trust .t span{font-size:.8rem;color:#9fb0c6;letter-spacing:.04em}
 
 /* hero card */
 .hero-card{
   background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
-  border:1px solid rgba(201,162,75,.35);border-radius:20px;padding:26px;
+  border:1px solid rgba(33,96,207,.35);border-radius:20px;padding:26px;
   box-shadow:var(--shadow-lg);backdrop-filter:blur(6px)
 }
 .hero-card .hc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
-.hero-card .hc-chip{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-300);border:1px solid rgba(201,162,75,.4);padding:5px 12px;border-radius:999px}
+.hero-card .hc-chip{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-300);border:1px solid rgba(33,96,207,.4);padding:5px 12px;border-radius:999px}
 .hero-card .hc-balance{font-size:.78rem;color:#9fb0c6}
 .hero-card .hc-amt{font-family:var(--serif);font-size:2.3rem;color:#fff;margin:4px 0 2px}
 .hero-card .hc-acct{font-size:.82rem;color:#9fb0c6;letter-spacing:.08em}
@@ -138,14 +139,14 @@ h2.section-title{font-size:2.15rem;margin-bottom:14px}
   background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;
   box-shadow:var(--shadow-sm);transition:.2s ease
 }
-.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--gold-300)}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--brand-300)}
 .card .ic{
   width:52px;height:52px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px;
-  background:linear-gradient(135deg,var(--navy-700),var(--navy-800));color:var(--gold-400)
+  background:linear-gradient(135deg,var(--navy-700),var(--navy-800));color:var(--brand-400)
 }
 .card h3{font-size:1.2rem;margin-bottom:9px}
 .card p{color:var(--muted);font-size:.95rem;margin:0}
-.card .more{display:inline-flex;gap:6px;margin-top:16px;color:var(--gold-500);font-weight:600;font-size:.9rem}
+.card .more{display:inline-flex;gap:6px;margin-top:16px;color:var(--brand-500);font-weight:600;font-size:.9rem}
 
 /* ---------- Split feature ---------- */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -160,7 +161,7 @@ h2.section-title{font-size:2.15rem;margin-bottom:14px}
 /* ---------- Stat band ---------- */
 .band{background:linear-gradient(160deg,var(--navy-900),var(--navy-700));color:#fff}
 .band .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
-.band .stat b{font-family:var(--serif);font-size:2.5rem;color:var(--gold-400);display:block}
+.band .stat b{font-family:var(--serif);font-size:2.5rem;color:var(--brand-400);display:block}
 .band .stat span{color:#b9c6d8;font-size:.9rem}
 
 /* ---------- Rates table ---------- */
@@ -171,16 +172,16 @@ h2.section-title{font-size:2.15rem;margin-bottom:14px}
 .rates td .r{font-weight:700;color:var(--navy-800)}
 
 /* ---------- CTA ---------- */
-.cta{background:linear-gradient(135deg,var(--gold-400),var(--gold-500));color:var(--navy-900);border-radius:22px;padding:52px;text-align:center}
-.cta h2{color:var(--navy-900);font-size:2rem;margin-bottom:10px}
-.cta p{color:#3a2f12;max-width:60ch;margin:0 auto 26px}
+.cta{background:linear-gradient(135deg,var(--brand-400),var(--brand-500));color:#fff;border-radius:22px;padding:52px;text-align:center}
+.cta h2{color:#fff;font-size:2rem;margin-bottom:10px}
+.cta p{color:rgba(255,255,255,.92);max-width:60ch;margin:0 auto 26px}
 
 /* ---------- Footer ---------- */
 .site-footer{background:var(--navy-900);color:#9fb0c6;padding:64px 0 28px;font-size:.9rem}
 .site-footer .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
 .site-footer h4{color:#fff;font-family:var(--font);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 16px}
 .site-footer a{display:block;margin-bottom:10px;color:#9fb0c6}
-.site-footer a:hover{color:var(--gold-300)}
+.site-footer a:hover{color:var(--brand-300)}
 .site-footer .fbrand img{height:42px;margin-bottom:14px}
 .site-footer .fbrand p{max-width:34ch;color:#7f90a8;font-size:.86rem}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#6c7d96;font-size:.82rem}
@@ -193,7 +194,7 @@ h2.section-title{font-size:2.15rem;margin-bottom:14px}
 .page-hero{background:linear-gradient(160deg,var(--navy-900),var(--navy-700));color:#fff;padding:64px 0}
 .page-hero h1{color:#fff;font-size:2.5rem}
 .page-hero .crumbs{font-size:.84rem;color:#9fb0c6;margin-bottom:14px}
-.page-hero .crumbs a:hover{color:var(--gold-300)}
+.page-hero .crumbs a:hover{color:var(--brand-300)}
 
 /* ---------- Forms (contact) ---------- */
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
@@ -203,7 +204,7 @@ h2.section-title{font-size:2.15rem;margin-bottom:14px}
   width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius-sm);
   font-family:inherit;font-size:.95rem;background:#fff;transition:.15s
 }
-.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--gold-500);box-shadow:0 0 0 3px rgba(201,162,75,.15)}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--brand-500);box-shadow:0 0 0 3px rgba(33,96,207,.15)}
 
 /* ---------- Responsive ---------- */
 @media (max-width:980px){
@@ -240,7 +241,7 @@ h2.section-title{font-size:2.15rem;margin-bottom:14px}
 .mobile-menu.open{display:flex;animation:mm .22s ease}
 @keyframes mm{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 .mobile-menu a{padding:14px 4px;border-bottom:1px solid var(--mist-2);font-weight:600;color:var(--navy-800);font-size:1rem}
-.mobile-menu a.active{color:var(--gold-500)}
+.mobile-menu a.active{color:var(--brand-500)}
 .mm-cta{display:flex;gap:10px;margin-top:16px}
 .mm-cta .btn{flex:1;justify-content:center}
 
@@ -256,12 +257,12 @@ h2.section-title{font-size:2.15rem;margin-bottom:14px}
 .sl-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;
   width:46px;height:46px;border-radius:50%;border:none;cursor:pointer;display:grid;place-items:center;
   background:rgba(7,19,36,.45);color:#fff;backdrop-filter:blur(4px);transition:.18s}
-.sl-arrow:hover{background:rgba(201,162,75,.92);color:var(--navy-900)}
+.sl-arrow:hover{background:rgba(33,96,207,.92);color:#fff}
 .sl-prev{left:40px}.sl-next{right:40px}
 .sl-dots{position:absolute;left:0;right:0;bottom:16px;display:flex;gap:9px;justify-content:center;z-index:3}
 .sl-dots button{width:10px;height:10px;border-radius:50%;border:none;cursor:pointer;padding:0;
   background:rgba(255,255,255,.55);transition:.2s}
-.sl-dots button.active{background:var(--gold-400);width:26px;border-radius:6px}
+.sl-dots button.active{background:var(--brand-400);width:26px;border-radius:6px}
 
 /* ---------- Hero CTA + trust bar ---------- */
 .hero-bar{border-bottom:1px solid var(--line);background:#fff;margin-top:22px}
@@ -298,3 +299,28 @@ h2.section-title{font-size:2.15rem;margin-bottom:14px}
   .slides{aspect-ratio:3/4}
   .hb-trust .t span{font-size:.72rem}
 }
+
+/* ============================================================
+   Splash screen + loading bar + logo visibility on dark
+   ============================================================ */
+#splash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;
+  background:radial-gradient(900px 520px at 50% 18%,var(--brand-600),var(--navy-900));
+  transition:opacity .55s ease, visibility .55s ease}
+#splash.hide{opacity:0;visibility:hidden}
+.splash-inner{display:flex;flex-direction:column;align-items:center;gap:24px;animation:splashpop .7s ease}
+@keyframes splashpop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+.splash-logo{background:#fff;border-radius:18px;padding:22px 30px;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.splash-logo img{height:62px;width:auto;display:block}
+.splash-tag{color:rgba(255,255,255,.72);font-size:.76rem;letter-spacing:.2em;text-transform:uppercase}
+.splash-bar{width:190px;height:4px;border-radius:999px;background:rgba(255,255,255,.16);overflow:hidden}
+.splash-bar span{display:block;height:100%;width:38%;border-radius:999px;
+  background:linear-gradient(90deg,var(--brand-300),#fff);animation:splashload 1.05s ease-in-out infinite}
+@keyframes splashload{0%{transform:translateX(-130%)}100%{transform:translateX(330%)}}
+
+#nprogress{position:fixed;top:0;left:0;right:0;height:3px;z-index:9998;opacity:0;transition:opacity .2s;pointer-events:none}
+#nprogress.active{opacity:1}
+#nprogress .bar{height:100%;width:0;background:linear-gradient(90deg,var(--brand-500),var(--brand-300));
+  box-shadow:0 0 8px rgba(33,96,207,.6);transition:width .3s ease}
+
+/* keep the navy logo readable on the dark footer */
+.site-footer .fbrand img{background:#fff;border-radius:10px;padding:9px 13px}

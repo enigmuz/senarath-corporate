@@ -1,6 +1,6 @@
 <?php
 $page='home';
-$title='Senarath Bank — Banking, redefined for Sri Lanka';
+$title='Senarath Bank - Banking, redefined for Sri Lanka';
 require __DIR__.'/includes/header.php';
 $onlineUrl = getenv('ONLINE_BANKING_URL') ?: 'https://online.senarathbank.com';
 ?>
@@ -8,14 +8,14 @@ $onlineUrl = getenv('ONLINE_BANKING_URL') ?: 'https://online.senarathbank.com';
 <!-- HERO SLIDER -->
 <section class="hero-slider" aria-label="Senarath Bank highlights" aria-roledescription="carousel">
   <div class="slides" id="slides">
-    <a class="slide is-active" href="/personal.php#open" aria-label="Ayubowan — Welcome to Senarath Bank">
-      <img src="/assets/img/slide1.jpg" alt="Ayubowan — Welcome to Senarath Bank, your trusted financial partner" fetchpriority="high">
+    <a class="slide is-active" href="/personal.php#open" aria-label="Ayubowan - Welcome to Senarath Bank">
+      <img src="/assets/img/slide1.jpg" alt="Ayubowan - Welcome to Senarath Bank, your trusted financial partner" fetchpriority="high">
     </a>
     <a class="slide" href="/personal.php#loans" aria-label="Banking for a better lifestyle">
-      <img src="/assets/img/slide2.jpg" alt="Banking for a better lifestyle — save, grow, own, invest" loading="lazy">
+      <img src="/assets/img/slide2.jpg" alt="Banking for a better lifestyle - save, grow, own, invest" loading="lazy">
     </a>
     <a class="slide" href="/about.php" aria-label="Banking for a more caring Sri Lanka">
-      <img src="/assets/img/slide3.jpg" alt="Banking for a more caring Sri Lanka — community support programme" loading="lazy">
+      <img src="/assets/img/slide3.jpg" alt="Banking for a more caring Sri Lanka - community support programme" loading="lazy">
     </a>
   </div>
   <button class="sl-arrow sl-prev" id="slPrev" aria-label="Previous slide" type="button">
@@ -106,7 +106,7 @@ $onlineUrl = getenv('ONLINE_BANKING_URL') ?: 'https://online.senarathbank.com';
     <div>
       <p class="eyebrow">Online &amp; mobile</p>
       <h2 class="section-title">Your whole bank, in your pocket</h2>
-      <p class="lead">The Senarath Online Banking portal puts every account, card and payment a tap away — secured with device binding and one-time passcodes.</p>
+      <p class="lead">The Senarath Online Banking portal puts every account, card and payment a tap away - secured with device binding and one-time passcodes.</p>
       <ul class="ticks">
         <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l4 4 8-9"/></svg> Instant transfers via LankaPay &amp; SLIPS</li>
         <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l4 4 8-9"/></svg> Pay utility, telco and government bills</li>

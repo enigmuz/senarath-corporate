@@ -1,6 +1,6 @@
 <?php
 $page='business';
-$title='Business Banking — Senarath Bank';
+$title='Business Banking - Senarath Bank';
 require __DIR__.'/includes/header.php';
 ?>
 <section class="page-hero">

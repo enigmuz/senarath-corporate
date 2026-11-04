@@ -1,6 +1,6 @@
 <?php
 $page='';
-$title='Security Centre — Senarath Bank';
+$title='Security Centre - Senarath Bank';
 require __DIR__.'/includes/header.php';
 $onlineUrl = getenv('ONLINE_BANKING_URL') ?: 'https://online.senarathbank.com';
 ?>

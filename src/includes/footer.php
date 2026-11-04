@@ -1,5 +1,5 @@
 <?php
-/* Senarath Bank — Corporate site footer */
+/* Senarath Bank - Corporate site footer */
 $onlineUrl = getenv('ONLINE_BANKING_URL') ?: 'https://online.senarathbank.com';
 ?>
 <footer class="site-footer">
@@ -7,7 +7,7 @@ $onlineUrl = getenv('ONLINE_BANKING_URL') ?: 'https://online.senarathbank.com';
     <div class="fgrid">
       <div class="fbrand">
         <img src="/assets/img/logo.png" alt="Senarath Bank">
-        <p>Senarath Bank PLC &mdash; personal, business and private banking across Sri Lanka. Member of the Lanka Deposit Insurance Scheme (synthetic / lab).</p>
+        <p>Senarath Bank PLC - personal, business and private banking across Sri Lanka. Member of the Lanka Deposit Insurance Scheme (synthetic / lab).</p>
       </div>
       <div>
         <h4>Banking</h4>

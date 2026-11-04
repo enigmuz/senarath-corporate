@@ -1,6 +1,6 @@
 <?php
 $page='contact';
-$title='Contact — Senarath Bank';
+$title='Contact - Senarath Bank';
 require __DIR__.'/includes/header.php';
 
 // Lab note: this form does not persist anything; it only echoes a confirmation.
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { $sent = true; }
         <h2 class="section-title">How can we help?</h2>
         <?php if ($sent): ?>
           <div class="card" style="border-color:var(--ok);margin-top:20px">
-            <h3 style="color:var(--ok)">Thank you — message received</h3>
+            <h3 style="color:var(--ok)">Thank you - message received</h3>
             <p>A Senarath Bank representative will be in touch shortly. (Lab: this form does not store data.)</p>
           </div>
         <?php else: ?>

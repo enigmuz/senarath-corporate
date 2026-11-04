@@ -1,6 +1,6 @@
 <?php
 $page='about';
-$title='About — Senarath Bank';
+$title='About - Senarath Bank';
 require __DIR__.'/includes/header.php';
 ?>
 <section class="page-hero">
@@ -18,7 +18,7 @@ require __DIR__.'/includes/header.php';
       <div>
         <p class="eyebrow">Our story</p>
         <h2 class="section-title">Built for people, run with discipline</h2>
-        <p class="lead">We exist to help Sri Lankans and their businesses manage, protect and grow their money. Our promise is simple: fair products, honest pricing and service you can rely on &mdash; at the branch and on every screen.</p>
+        <p class="lead">We exist to help Sri Lankans and their businesses manage, protect and grow their money. Our promise is simple: fair products, honest pricing and service you can rely on - at the branch and on every screen.</p>
         <ul class="ticks">
           <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l4 4 8-9"/></svg> 214 branches and 480 ATMs nationwide</li>
           <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l4 4 8-9"/></svg> 1.2 million personal and business customers</li>

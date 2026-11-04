@@ -14,8 +14,6 @@ services:
     environment:
       # Public URL of the online banking host (used for "Log in" links)
       ONLINE_BANKING_URL: "https://online.senarathbank.com"
-    ports:
-      - "8081:80"
     networks:
       senarath-net:
         aliases: [corporate]
