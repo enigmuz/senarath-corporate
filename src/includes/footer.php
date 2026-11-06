@@ -1,6 +1,6 @@
 <?php
 /* Senarath Bank - Corporate site footer */
-$onlineUrl = getenv('ONLINE_BANKING_URL') ?: 'https://online.senarathbank.com';
+$onlineUrl = getenv('ONLINE_BANKING_URL') ?: 'https://ebanking.senarathbank.com';
 ?>
 <footer class="site-footer">
   <div class="container">

@@ -2,7 +2,7 @@
 /* Senarath Bank - Corporate site header
    LAB ENVIRONMENT · fictional institution · synthetic content only */
 $page = $page ?? '';
-$onlineUrl = getenv('ONLINE_BANKING_URL') ?: 'https://online.senarathbank.com';
+$onlineUrl = getenv('ONLINE_BANKING_URL') ?: 'https://ebanking.senarathbank.com';
 function navcls($p,$cur){ return $p===$cur ? 'active' : ''; }
 ?>
 <!doctype html>

@@ -13,7 +13,7 @@ services:
     restart: unless-stopped
     environment:
       # Public URL of the online banking host (used for "Log in" links)
-      ONLINE_BANKING_URL: "https://online.senarathbank.com"
+      ONLINE_BANKING_URL: "https://ebanking.senarathbank.com"
     networks:
       senarath-net:
         aliases: [corporate]
