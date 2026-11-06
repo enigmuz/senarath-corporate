@@ -10,14 +10,13 @@
 ## What this is
 
 A polished, responsive corporate banking website (home, personal, business, about,
-contact, branches, security centre) built as a small PHP + Apache app and shipped as a
-Docker container. It is the "brochure" site a visitor sees at
-`https://www.senarathbank.com` before clicking through to Online Banking at
-`https://online.senarathbank.com`.
+contact, branches, security centre) built as a small **PHP 8.2 + Apache** app. It is
+the "brochure" site a visitor sees at `https://senarathbank.com` before clicking
+through to Online Banking at `https://ebanking.senarathbank.com`.
 
 ## Stack
 
-- PHP 8.2 + Apache (`php:8.2-apache`)
+- PHP 8.2 + Apache (native, mod_php — no containers)
 - Server-rendered PHP templates, one shared CSS design system, a little vanilla JS
 - No database, no secrets
 
@@ -25,9 +24,6 @@ Docker container. It is the "brochure" site a visitor sees at
 
 ```
 senarath-corporate/
-├─ Dockerfile
-├─ docker-compose.yml        # joins external network "senarath-net"
-├─ .dockerignore
 ├─ .gitignore
 ├─ README.md
 └─ src/
@@ -42,33 +38,29 @@ senarath-corporate/
    └─ assets/{css,js,img}/   # style.css, main.js, logo.png
 ```
 
-## Run it (standalone, for a quick look)
+## Deploy
 
+This site is deployed **natively alongside the banking app** on WEB01 (Apache
+name-based virtual hosts, no Docker). The full from-scratch walkthrough — pushing
+the repos, DNS, the one-command installer, and TLS — is the single guide in the
+ebanking repo: **`senarath-ebanking/DEPLOY.md`**.
+
+In short, on WEB01:
 ```bash
-# Build and run just this site on port 8081
-docker build -t senarath/corporate:lab .
-docker run --rm -p 8081:80 senarath/corporate:lab
-# open http://localhost:8081
+sudo git clone https://github.com/enigmuz/senarath-corporate.git /var/www/senarath-corporate
+sudo git clone https://github.com/enigmuz/senarath-ebanking.git  /var/www/senarath-ebanking
+sudo SQL01_IP=<SQL01_IP> bash /var/www/senarath-ebanking/deploy/install-native.sh
 ```
+The installer's Apache vhost serves this repo's `src/` for `senarathbank.com` /
+`www.senarathbank.com`.
 
-## Run it as part of the lab (behind the nginx gateway)
-
-The full deployment is driven from the `senarath-ebanking` repo's gateway. In short, on
-WEB01:
-
+### Quick local look (optional)
 ```bash
-docker network create senarath-net           # once
-cd senarath-corporate && docker compose up -d --build
+php -S 0.0.0.0:8081 -t src    # open http://localhost:8081
 ```
-
-Then bring up `senarath-ebanking` (which starts the nginx gateway that routes
-`www.senarathbank.com` → this container and `online.senarathbank.com` → the banking app).
-
-See **`senarath-ebanking/DEPLOYMENT_GUIDE.md`** for the complete, step-by-step Ubuntu +
-Docker + nginx walkthrough.
 
 ## Configuration
 
 | Env var | Default | Purpose |
 |---|---|---|
-| `ONLINE_BANKING_URL` | `https://online.senarathbank.com` | Target for "Log in" / "Online Banking" links |
+| `ONLINE_BANKING_URL` | `https://ebanking.senarathbank.com` | Target for "Log in" / "Online Banking" links |
